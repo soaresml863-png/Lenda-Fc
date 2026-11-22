@@ -1,0 +1,202 @@
+/*
+ * Tailwind v4 entry: config lives here, with no tailwind.config.js or PostCSS plugin.
+ * Web fonts are loaded with a <link> in src/routes/__root.tsx.
+ */
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Lenda FC design system — "estádio à noite": gramado escuro, linhas de giz,
+ * refletor verde-limão e dourado de troféu.
+ */
+
+@theme inline {
+  --font-sans: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Anton", "Barlow Condensed", ui-sans-serif, sans-serif;
+  --font-condensed: "Barlow Condensed", "Barlow", ui-sans-serif, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-win: var(--win);
+  --color-draw: var(--draw);
+  --color-loss: var(--loss);
+  --color-pitch: var(--pitch);
+  --color-chalk: var(--chalk);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.155 0.025 160);
+  --foreground: oklch(0.96 0.012 110);
+  --card: oklch(0.195 0.03 160);
+  --card-foreground: oklch(0.96 0.012 110);
+  --popover: oklch(0.2 0.03 160);
+  --popover-foreground: oklch(0.96 0.012 110);
+  --primary: oklch(0.9 0.19 124);
+  --primary-foreground: oklch(0.17 0.035 160);
+  --secondary: oklch(0.255 0.035 160);
+  --secondary-foreground: oklch(0.96 0.012 110);
+  --muted: oklch(0.23 0.03 160);
+  --muted-foreground: oklch(0.72 0.03 140);
+  --accent: oklch(0.28 0.05 155);
+  --accent-foreground: oklch(0.96 0.012 110);
+  --destructive: oklch(0.63 0.21 25);
+  --destructive-foreground: oklch(0.98 0.01 100);
+  --border: oklch(0.3 0.035 160);
+  --input: oklch(0.32 0.035 160);
+  --ring: oklch(0.9 0.19 124);
+
+  --gold: oklch(0.83 0.15 84);
+  --gold-foreground: oklch(0.22 0.04 70);
+  --win: oklch(0.8 0.17 150);
+  --draw: oklch(0.75 0.03 140);
+  --loss: oklch(0.66 0.2 25);
+  --pitch: oklch(0.3 0.07 152);
+  --chalk: oklch(0.96 0.012 110 / 0.14);
+
+  --gradient-hero:
+    radial-gradient(ellipse 80% 60% at 50% -10%, color-mix(in oklab, var(--primary) 22%, transparent), transparent 70%),
+    radial-gradient(ellipse 60% 50% at 100% 100%, color-mix(in oklab, var(--gold) 14%, transparent), transparent 70%);
+  --gradient-gold: linear-gradient(135deg, var(--gold), color-mix(in oklab, var(--gold) 60%, white));
+  --shadow-glow: 0 0 40px -8px color-mix(in oklab, var(--primary) 65%, transparent);
+  --shadow-gold: 0 0 36px -10px color-mix(in oklab, var(--gold) 75%, transparent);
+  --shadow-card: 0 18px 40px -24px oklch(0 0 0 / 0.7);
+
+  --chart-1: var(--primary);
+  --chart-2: var(--gold);
+  --chart-3: var(--win);
+  --chart-4: var(--loss);
+  --chart-5: var(--draw);
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+@utility bg-hero {
+  background-image: var(--gradient-hero);
+}
+@utility bg-gold-gradient {
+  background-image: var(--gradient-gold);
+}
+@utility pitch-stripes {
+  background-image: repeating-linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--pitch) 28%, transparent) 0 72px,
+    transparent 72px 144px
+  );
+}
+@utility chalk-grid {
+  background-image:
+    linear-gradient(var(--chalk) 1px, transparent 1px),
+    linear-gradient(90deg, var(--chalk) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+@utility shadow-gold {
+  box-shadow: var(--shadow-gold);
+}
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
+}
+@utility text-display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 0.95;
+}
+@utility text-label {
+  font-family: var(--font-condensed);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  font-size: 0.72rem;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes floodlight {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@utility animate-rise {
+  animation: rise 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@utility animate-floodlight {
+  animation: floodlight 4s ease-in-out infinite;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "tnum";
+  }
+}
